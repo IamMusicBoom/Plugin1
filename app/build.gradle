@@ -16,6 +16,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        //定义编译的apk的名字
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "plugin1.apk"
+            }
+        }
     }
 }
 // 这个plugin需要放在android配置之后，因为需要读取android中的配置项

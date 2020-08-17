@@ -34,7 +34,7 @@ repluginPluginConfig {
 //宿主app的包名
     hostApplicationId = "com.optima.w_n_host"
 //宿主app的启动activity
-    hostAppLauncherActivity = "com.optima.w_n_host.MainActivity"
+    hostAppLauncherActivity = "com.optima.w_n_host.Plugin1MainActivity"
 }
 
 

@@ -12,13 +12,14 @@
         <meta-data
             android:name="com.qihoo360.plugin.name"
             android:value="plugin1" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Plugin1MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.SecondActivity"/>
     </application>
 
 </manifest>

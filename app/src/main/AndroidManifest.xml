@@ -20,6 +20,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.SecondActivity"/>
+
+        <receiver android:name=".broadcast.BroadcastTest">
+            <intent-filter>
+            <action android:name="com.optima.plugin.host.ACTION_BROADCAST_RECEIVER"/>
+        </intent-filter>
+        </receiver>
+        <activity android:name=".activity.BroadcastActivity"/>
     </application>
 
 </manifest>

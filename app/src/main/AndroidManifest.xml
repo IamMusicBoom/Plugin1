@@ -27,6 +27,8 @@
         </intent-filter>
         </receiver>
         <activity android:name=".activity.BroadcastActivity"/>
+        <service android:name=".service.Plugin1ServiceTest"/>
+        <activity android:name=".activity.ServiceTestActivity"/>
     </application>
 
 </manifest>

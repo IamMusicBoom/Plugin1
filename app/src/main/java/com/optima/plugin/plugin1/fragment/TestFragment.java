@@ -24,6 +24,7 @@ import com.optima.plugin.repluginlib.base.BaseFragment;
  */
 public class TestFragment extends BaseFragment implements View.OnClickListener{
     Button btn1,btn2,btn3,btn4,btn5,btn6;
+    Button btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -40,6 +41,27 @@ public class TestFragment extends BaseFragment implements View.OnClickListener{
         btn5.setOnClickListener(this);
         btn6 = view.findViewById(R.id.btn_go_host_activity_for_result);
         btn6.setOnClickListener(this);
+
+
+        btn7 = view.findViewById(R.id.btn_start_plugin_service);
+        btn7.setOnClickListener(this);
+        btn8 = view.findViewById(R.id.btn_stop_plugin_service);
+        btn8.setOnClickListener(this);
+        btn9 = view.findViewById(R.id.btn_bind_plugin_service);
+        btn9.setOnClickListener(this);
+        btn10 = view.findViewById(R.id.btn_unbind_plugin_service);
+        btn10.setOnClickListener(this);
+        btn11 = view.findViewById(R.id.btn_start_host_service);
+        btn11.setOnClickListener(this);
+        btn12 = view.findViewById(R.id.btn_stop_host_service);
+        btn12.setOnClickListener(this);
+        btn13 = view.findViewById(R.id.btn_bind_host_service);
+        btn13.setOnClickListener(this);
+        btn14 = view.findViewById(R.id.btn_unbind_host_service);
+        btn14.setOnClickListener(this);
+
+
+
         return view;
     }
 

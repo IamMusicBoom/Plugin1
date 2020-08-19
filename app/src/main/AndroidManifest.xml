@@ -33,6 +33,7 @@
         <provider
             android:authorities="com.optima.plugin.plugin1"
             android:name=".provider.Plugin1Provider"/>
+        <activity android:name=".activity.AIDLTestActivity"/>
     </application>
 
 </manifest>

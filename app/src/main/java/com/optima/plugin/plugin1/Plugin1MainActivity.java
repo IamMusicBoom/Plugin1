@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.optima.plugin.plugin1.activity.AIDLTestActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
 import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.PluginUtils.P_Context;
@@ -42,6 +43,9 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
             startActivityForResult(intent, P_Constants.REQUEST_CODE, true);
         }else if(id == R.id.btn_go_inner_activity_for_fragment){// 跳转至Fragment，测试Fragment
             Intent intent = new Intent(this,SecondActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.btn_go_inner_activity_for_aidl){
+            Intent intent = new Intent(this, AIDLTestActivity.class);
             startActivity(intent);
         }
     }

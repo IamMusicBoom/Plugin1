@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.optima.plugin.plugin1.activity.AIDLTestActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
+import com.optima.plugin.repluginlib.Logger;
 import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.PluginUtils.P_Context;
 import com.optima.plugin.repluginlib.base.BaseActivity;
@@ -17,6 +18,10 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ClassLoader hostClassLoader = P_Context.getHostClassLoader();
+        ClassLoader pluginClassLoader = P_Context.getPluginClassLoader(P_Constants.ALIAS_PLUGIN_1);
+        Logger.d(TAG, "onCreate: hostClassLoader = " + hostClassLoader);
+        Logger.d(TAG, "onCreate: pluginClassLoader = " + pluginClassLoader);
     }
 
     @Override

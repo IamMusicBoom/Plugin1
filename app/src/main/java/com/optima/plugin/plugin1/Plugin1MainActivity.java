@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.optima.plugin.plugin1.activity.AIDLTestActivity;
+import com.optima.plugin.plugin1.activity.NotificationTestActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
 import com.optima.plugin.repluginlib.Logger;
 import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
@@ -50,7 +51,7 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
             Intent intent = new Intent(this,SecondActivity.class);
             startActivity(intent);
         }else if(id == R.id.btn_go_inner_activity_for_aidl){
-            Intent intent = new Intent(this, AIDLTestActivity.class);
+            Intent intent = new Intent(this, NotificationTestActivity.class);
             startActivity(intent);
         }
     }

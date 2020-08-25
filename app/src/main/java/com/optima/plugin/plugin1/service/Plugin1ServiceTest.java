@@ -6,10 +6,13 @@ import android.os.Binder;
 import android.os.IBinder;
 
 import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
 
 import com.optima.plugin.plugin1.activity.ServiceTestActivity;
 import com.optima.plugin.repluginlib.Logger;
 import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
+import com.optima.plugin.repluginlib.PluginUtils.P_Manager;
+import com.optima.plugin.repluginlib.utils.NotificationUtils;
 
 /**
  * create by wma
@@ -23,6 +26,12 @@ public class Plugin1ServiceTest extends Service {
     public void onCreate() {
         super.onCreate();
         Logger.d(TAG, "onCreate: ");
+//        NotificationCompat.Builder defaultBuilder = new NotificationUtils().createDefaultBuilder();
+//        defaultBuilder.setContentTitle("插件Title");
+//        defaultBuilder.setContentText("插件内容");
+//        startForeground(1002,defaultBuilder.build());
+        Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid());
+        Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid() + " ProcessName = " + P_Manager.getProcessName(android.os.Process.myPid() ));
     }
 
 

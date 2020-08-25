@@ -3,14 +3,17 @@ package com.optima.plugin.plugin1;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
 import android.view.View;
 
 import com.optima.plugin.plugin1.activity.AIDLTestActivity;
 import com.optima.plugin.plugin1.activity.NotificationTestActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
+import com.optima.plugin.plugin1.activity.ServiceTestActivity;
 import com.optima.plugin.repluginlib.Logger;
 import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.PluginUtils.P_Context;
+import com.optima.plugin.repluginlib.PluginUtils.P_Manager;
 import com.optima.plugin.repluginlib.base.BaseActivity;
 
 public class Plugin1MainActivity extends BaseActivity implements View.OnClickListener {
@@ -19,10 +22,8 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ClassLoader hostClassLoader = P_Context.getHostClassLoader();
-        ClassLoader pluginClassLoader = P_Context.getPluginClassLoader(P_Constants.ALIAS_PLUGIN_1);
-        Logger.d(TAG, "onCreate: hostClassLoader = " + hostClassLoader);
-        Logger.d(TAG, "onCreate: pluginClassLoader = " + pluginClassLoader);
+        Logger.d(TAG, "onCreate: pid = " + Process.myPid() + " taskId = " + getTaskId());
+        Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid() + " ProcessName = " + P_Manager.getProcessName(android.os.Process.myPid() ));
     }
 
     @Override
@@ -51,8 +52,12 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
             Intent intent = new Intent(this,SecondActivity.class);
             startActivity(intent);
         }else if(id == R.id.btn_go_inner_activity_for_aidl){
-            Intent intent = new Intent(this, NotificationTestActivity.class);
+            Intent intent = new Intent(this, AIDLTestActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.btn_go_service_test){
+            Intent intent = new Intent(this, ServiceTestActivity.class);
             startActivity(intent);
         }
+
     }
 }

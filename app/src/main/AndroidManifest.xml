@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.optima.plugin.plugin1">
-
+<!--    android:process=":wft"-->
+<!--    android:launchMode="singleTask"-->
+<!--    android:taskAffinity="com.optima.plugin.host.otherTask"-->
     <application
         android:name=".Plugin1Application"
         android:allowBackup="true"
@@ -13,14 +15,20 @@
         <meta-data
             android:name="com.qihoo360.plugin.name"
             android:value="plugin1" />
-        <activity android:name=".Plugin1MainActivity">
+        <activity android:name=".Plugin1MainActivity"
+            android:launchMode="singleTask"
+            android:process=":GuardService"
+            android:taskAffinity="com.optima.plugin.host.otherTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SecondActivity"/>
+        <activity android:name=".activity.SecondActivity"
+            android:launchMode="singleTask"
+            android:process=":GuardService"
+            android:taskAffinity="com.optima.plugin.host.otherTask"/>
 
         <receiver android:name=".broadcast.BroadcastTest">
             <intent-filter>
@@ -28,7 +36,12 @@
         </intent-filter>
         </receiver>
         <activity android:name=".activity.BroadcastActivity"/>
-        <service android:name=".service.Plugin1ServiceTest"/>
+        <service android:name=".service.Plugin1ServiceTest"
+            android:process=":GuardService">
+            <intent-filter>
+                <action android:name="ACTION_FOREGROUND_SERVICE"/>
+            </intent-filter>
+        </service>
         <activity android:name=".activity.ServiceTestActivity"/>
         <activity android:name=".activity.ProviderTestActivity"/>
         <provider

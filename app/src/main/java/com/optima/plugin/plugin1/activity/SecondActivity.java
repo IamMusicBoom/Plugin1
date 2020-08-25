@@ -1,6 +1,7 @@
 package com.optima.plugin.plugin1.activity;
 
 import android.os.Bundle;
+import android.os.Process;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
@@ -8,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.optima.plugin.plugin1.R;
 import com.optima.plugin.plugin1.fragment.TestFragment;
+import com.optima.plugin.repluginlib.Logger;
 import com.optima.plugin.repluginlib.base.BaseActivity;
 
 /**
@@ -23,5 +25,7 @@ public class SecondActivity extends BaseActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.container,new TestFragment(),"TestFragment");
         ft.commit();
+        Logger.d(TAG, "onCreate: pid = " + Process.myPid() + " taskId = " + getTaskId());
+
     }
 }

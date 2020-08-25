@@ -3,6 +3,7 @@ package com.optima.plugin.plugin1.activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
@@ -10,9 +11,9 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.optima.plugin.plugin1.R;
+import com.optima.plugin.plugin1.service.Plugin1ServiceTest;
 import com.optima.plugin.repluginlib.Logger;
 import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
-import com.optima.plugin.repluginlib.PluginUtils.P_Context;
 import com.optima.plugin.repluginlib.base.BaseActivity;
 
 /**
@@ -53,6 +54,14 @@ public class ServiceTestActivity extends BaseActivity implements View.OnClickLis
             bindService(hostIntent,connection,BIND_AUTO_CREATE);
         } else if (v.getId() == R.id.btn_unbind_host_service) {// 解绑宿主服务
             unbindService(connection);
+        }else if(v.getId() == R.id.btn_start_foreground_service){
+            Intent intent = new Intent("ACTION_FOREGROUND_SERVICE");
+            intent.setComponent(new ComponentName("com.optima.plugin.plugin1","com.optima.plugin.plugin1.service.Plugin1ServiceTest"));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(intent);
+            }else{
+                startService(intent);
+            }
         }
     }
 

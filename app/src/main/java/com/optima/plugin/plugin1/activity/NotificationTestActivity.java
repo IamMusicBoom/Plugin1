@@ -16,6 +16,7 @@ import androidx.core.app.NotificationManagerCompat;
 
 import com.optima.plugin.plugin1.Plugin1MainActivity;
 import com.optima.plugin.plugin1.R;
+import com.optima.plugin.plugin1.service.Plugin1ServiceTest;
 import com.optima.plugin.repluginlib.PluginUtils.P_Context;
 import com.optima.plugin.repluginlib.base.BaseActivity;
 import com.optima.plugin.repluginlib.utils.NotificationUtils;
@@ -44,20 +45,12 @@ public class NotificationTestActivity extends BaseActivity implements View.OnCli
             utils.showNotification(666, builder.build());
 
         } else if (v.getId() == R.id.btn_show_importance_notification) {// 展示重要通知栏
+            Intent service = new Intent(NotificationTestActivity.this, Plugin1ServiceTest.class);
+            PendingIntent service1 = PendingIntent.getService(NotificationTestActivity.this, 0, service, PendingIntent.FLAG_UPDATE_CURRENT);
             NotificationCompat.Builder builder = utils.createImportanceBuilder();
-            builder.setContentText("通知").setContentTitle("重要通知").setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.icon_large));
+            builder.setContentText("通知").setContentTitle("重要通知").setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.icon_large)).setContentIntent(service1);
             utils.showNotification(777, builder.build());
         } else if (v.getId() == R.id.btn_show_customize_notification) {
-//            NotificationCompat.Builder builder = utils.createDefaultBuilder();
-//            RemoteViews smallView = new RemoteViews(getPackageName(), R.layout.notification_small);
-////            RemoteViews largeView = new RemoteViews(getPackageName(),R.layout.notification_large);
-//            builder.setCustomContentView(smallView);
-////            builder.setCustomBigContentView(largeView);
-////            Intent intent = new Intent(this, Plugin1MainActivity.class);
-////            PendingIntent sure = PendingIntent.getActivity(this,0,intent,0);
-////            largeView.setOnClickPendingIntent(R.id.btn_sure,sure);
-//            utils.showNotification(888, builder.build());
-
             NotificationManagerCompat manager = NotificationManagerCompat.from(NotificationTestActivity.this);
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 NotificationChannel channel = new NotificationChannel("888","annn", NotificationManager.IMPORTANCE_DEFAULT);

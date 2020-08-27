@@ -26,10 +26,6 @@ public class Plugin1ServiceTest extends Service {
     public void onCreate() {
         super.onCreate();
         Logger.d(TAG, "onCreate: ");
-//        NotificationCompat.Builder defaultBuilder = new NotificationUtils().createDefaultBuilder();
-//        defaultBuilder.setContentTitle("插件Title");
-//        defaultBuilder.setContentText("插件内容");
-//        startForeground(1002,defaultBuilder.build());
         Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid());
         Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid() + " ProcessName = " + P_Manager.getProcessName(android.os.Process.myPid() ));
     }

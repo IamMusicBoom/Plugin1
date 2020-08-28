@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".Plugin1MainActivity">
 
+    <ImageView
+        android:id="@+id/text111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="撒大大大大大"/>
+
     <Button
         android:id="@+id/btn_go_plugin_activity"
         android:layout_width="match_parent"

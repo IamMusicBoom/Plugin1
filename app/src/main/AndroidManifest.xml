@@ -15,10 +15,7 @@
         <meta-data
             android:name="com.qihoo360.plugin.name"
             android:value="plugin1" />
-        <activity android:name=".Plugin1MainActivity"
-            android:launchMode="singleTask"
-            android:process=":GuardService"
-            android:taskAffinity="com.optima.plugin.host.otherTask">
+        <activity android:name=".Plugin1MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,6 +46,7 @@
             android:name=".provider.Plugin1Provider"/>
         <activity android:name=".activity.AIDLTestActivity"/>
         <activity android:name=".activity.NotificationTestActivity"/>
+        <activity android:name=".activity.BinderTestActivity"/>
     </application>
 
 </manifest>

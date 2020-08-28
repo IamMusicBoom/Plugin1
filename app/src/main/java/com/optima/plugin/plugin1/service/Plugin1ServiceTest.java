@@ -4,15 +4,18 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.os.RemoteException;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
+import com.optima.plugin.host.ILockScreenImpl;
 import com.optima.plugin.plugin1.activity.ServiceTestActivity;
 import com.optima.plugin.repluginlib.Logger;
 import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.PluginUtils.P_Manager;
 import com.optima.plugin.repluginlib.utils.NotificationUtils;
+import com.qihoo360.replugin.RePlugin;
 
 /**
  * create by wma

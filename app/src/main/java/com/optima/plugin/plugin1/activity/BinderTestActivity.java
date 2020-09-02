@@ -13,9 +13,11 @@ import com.optima.plugin.host.module.User;
 import com.optima.plugin.plugin1.R;
 import com.optima.plugin.plugin1.binder.HostBinder;
 import com.optima.plugin.repluginlib.Logger;
-import com.optima.plugin.repluginlib.PluginUtils.P_Binder;
-import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
+import com.optima.plugin.repluginlib.pluginUtils.P_Binder;
+import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.base.BaseActivity;
+import com.optima.plugin.repluginlib.pluginUtils.P_Binder;
+import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 import com.qihoo360.replugin.RePlugin;
 
 import java.util.List;

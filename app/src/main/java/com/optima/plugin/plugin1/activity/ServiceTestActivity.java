@@ -11,10 +11,9 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.optima.plugin.plugin1.R;
-import com.optima.plugin.plugin1.service.Plugin1ServiceTest;
 import com.optima.plugin.repluginlib.Logger;
-import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.base.BaseActivity;
+import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 
 /**
  * create by wma

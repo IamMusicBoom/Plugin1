@@ -1,7 +1,8 @@
 package com.optima.plugin.plugin1;
 
 import android.app.Application;
-import com.optima.plugin.repluginlib.PluginUtils.P_Context;
+
+import com.optima.plugin.repluginlib.pluginUtils.P_Context;
 
 /**
  * create by wma

@@ -12,11 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.optima.plugin.plugin1.activity.SecondActivity;
-import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
-import com.optima.plugin.repluginlib.PluginUtils.P_Context;
 import com.optima.plugin.repluginlib.base.BaseFragment;
+import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
+import com.optima.plugin.repluginlib.pluginUtils.P_Context;
 
-/**
+    /**
  * create by wma
  * on 2020/8/17 0017
  */

@@ -14,8 +14,8 @@ import androidx.annotation.Nullable;
 
 import com.optima.plugin.plugin1.R;
 import com.optima.plugin.plugin1.activity.SecondActivity;
-import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
-import com.optima.plugin.repluginlib.PluginUtils.P_Context;
+import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
+import com.optima.plugin.repluginlib.pluginUtils.P_Context;
 import com.optima.plugin.repluginlib.base.BaseFragment;
 
 /**

@@ -12,16 +12,13 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.optima.plugin.host.ILockScreenImpl;
-import com.optima.plugin.plugin1.activity.AIDLTestActivity;
-import com.optima.plugin.plugin1.activity.NotificationTestActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
 import com.optima.plugin.plugin1.activity.ServiceTestActivity;
 import com.optima.plugin.repluginlib.Logger;
-import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
-import com.optima.plugin.repluginlib.PluginUtils.P_Context;
-import com.optima.plugin.repluginlib.PluginUtils.P_Manager;
 import com.optima.plugin.repluginlib.base.BaseActivity;
+import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
+import com.optima.plugin.repluginlib.pluginUtils.P_Context;
+import com.optima.plugin.repluginlib.pluginUtils.P_Manager;
 import com.qihoo360.replugin.RePlugin;
 
 public class Plugin1MainActivity extends BaseActivity implements View.OnClickListener {
@@ -30,8 +27,7 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Logger.d(TAG, "onCreate: pid = " + Process.myPid() + " taskId = " + getTaskId());
-        Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid() + " ProcessName = " + P_Manager.getProcessName(android.os.Process.myPid() ));
+        Logger.d(TAG, "onCreate: packageName = " + P_Constants.HOST_PACKAGE_NAME);
         int color = ContextCompat.getColor(P_Context.getContext(), R.color.colorAccent);
         ImageView textView = findViewById(R.id.text111);
         textView.setImageDrawable(ContextCompat.getDrawable(P_Context.getContext(),R.mipmap.icon_small));
@@ -63,8 +59,8 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
             Intent intent = new Intent(this,SecondActivity.class);
             startActivity(intent);
         }else if(id == R.id.btn_go_inner_activity_for_aidl){
-            Intent intent = new Intent(this, AIDLTestActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, AIDLTestActivity.class);
+//            startActivity(intent);
         }else if(id == R.id.btn_go_service_test){
             Intent intent = new Intent(this, ServiceTestActivity.class);
             startActivity(intent);

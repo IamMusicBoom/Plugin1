@@ -6,7 +6,7 @@ import android.content.Intent;
 
 import com.optima.plugin.plugin1.activity.BroadcastActivity;
 import com.optima.plugin.repluginlib.Logger;
-import com.optima.plugin.repluginlib.PluginUtils.P_Constants;
+import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 
 /**
  * create by wma

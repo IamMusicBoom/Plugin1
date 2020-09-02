@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
+import com.optima.plugin.plugin1.activity.CommonAIDLActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
 import com.optima.plugin.plugin1.activity.ServiceTestActivity;
 import com.optima.plugin.repluginlib.Logger;
@@ -63,6 +64,9 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
 //            startActivity(intent);
         }else if(id == R.id.btn_go_service_test){
             Intent intent = new Intent(this, ServiceTestActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.btn_go_common_aidl){
+            Intent intent = new Intent(this, CommonAIDLActivity.class);
             startActivity(intent);
         }
 

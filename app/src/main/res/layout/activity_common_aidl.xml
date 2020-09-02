@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_bind_host_service"
+        android:layout_width="match_parent"
+        android:onClick="onClick"
+        android:layout_height="wrap_content"
+        android:text="绑定宿主服务"/>
+    <Button
+        android:id="@+id/btn_unbind_host_service"
+        android:layout_width="match_parent"
+        android:onClick="onClick"
+        android:layout_height="wrap_content"
+        android:text="解绑宿主服务"/>
+    <Button
+        android:id="@+id/btn_set_user"
+        android:layout_width="match_parent"
+        android:onClick="onClick"
+        android:layout_height="wrap_content"
+        android:text="设置一个User"/>
+    <Button
+        android:id="@+id/btn_add_exist_user"
+        android:layout_width="match_parent"
+        android:onClick="onClick"
+        android:layout_height="wrap_content"
+        android:text="添加一个已存在的user"/>
+    <Button
+        android:id="@+id/btn_add_new_user"
+        android:layout_width="match_parent"
+        android:onClick="onClick"
+        android:layout_height="wrap_content"
+        android:text="添加一个新的user"/>
+
+</LinearLayout>

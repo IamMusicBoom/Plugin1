@@ -20,31 +20,23 @@ public class ViewBinder extends IViewAidlInterface.Stub {
     IViewAidlInterface iView;
     @Override
     public void onClick(int resId) throws RemoteException {
-        Logger.d(TAG, "onClick: resId = " + resId);
-        if(resId == R.id.btn_provide_onClick){
+        if(resId == R.id.btn_get_host_binder){
             IBinder host_view_binder = P_Binder.getHostBinder("host_view_binder");
-            iView = Stub.asInterface(host_view_binder);
-            try {
-                iView.setText(R.id.tv_provide_test,"行行行");
-            } catch (RemoteException e) {
-                e.printStackTrace();
-            }
-        }else if(resId == R.id.btn_provide_setColor){
-            Logger.d(TAG, "onClick: setColor");
-
-        }
-        else if(resId == R.id.tv_provide_test){
+            iView = IViewAidlInterface.Stub.asInterface(host_view_binder);
+        }else if(resId == R.id.btn_click){
+            Logger.d(TAG, "onClick: 点击");
+        }else if(resId == R.id.btn_start_anim){
             iView.startAnim(R.id.custom_view);
+        }else if(resId == R.id.tv_set_text){
+            iView.setText(R.id.tv_set_text,"这是我设置的值");
         }
     }
 
     @Override
     public void onLongClick(int resId) throws RemoteException {
-        Logger.d(TAG, "onLongClick: resId = " + resId);
-        if(resId == R.id.btn_provide_onClick){
-            Logger.d(TAG, "onLongClick: onclick");
-        }else if(resId == R.id.btn_provide_setColor){
-            Logger.d(TAG, "onLongClick: setColor");
+        if(resId == R.id.btn_long_click){
+
+            Logger.d(TAG, "onLongClick: 长按");
         }
     }
 

@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/root_view"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <Button
-        android:id="@+id/btn_provide_onClick"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button测试Click时间"/>
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_provide_setText"
+        android:id="@+id/btn_get_host_binder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button测试setText时间"/>
+        android:text="获取宿主Binder"/>
 
     <Button
-        android:id="@+id/btn_provide_setColor"
+        android:id="@+id/btn_click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button测试setColor时间"/>
+        android:text="点击测试" />
+
+    <Button
+        android:id="@+id/btn_long_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="长按测试" />
+
+    <Button
+        android:id="@+id/btn_start_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始动画" />
 
     <TextView
-        android:id="@+id/tv_provide_test"
+        android:id="@+id/tv_set_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_margin="20dp"
-        android:text="TextView测试background"
-        android:background="@drawable/provide_bg"/>
+        android:background="@drawable/provide_bg"
+        android:layout_margin="20dp"/>
 
 
-        <com.optima.plugin.host.view.TestTextView
-            android:id="@+id/custom_view"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:padding="20dp"
-            android:background="@drawable/provide_bg"
-            />
+    <com.optima.plugin.host.view.TestTextView
+        android:id="@+id/custom_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/provide_bg" />
 
 </LinearLayout>

@@ -29,9 +29,6 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Logger.d(TAG, "onCreate: packageName = " + P_Constants.HOST_PACKAGE_NAME);
-        int color = ContextCompat.getColor(P_Context.getContext(), R.color.colorAccent);
-        ImageView textView = findViewById(R.id.text111);
-        textView.setImageDrawable(ContextCompat.getDrawable(P_Context.getContext(),R.mipmap.icon_small));
     }
 
     @Override

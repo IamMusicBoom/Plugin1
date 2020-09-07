@@ -10,8 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
 import com.optima.plugin.host.ILockScreenImpl;
+import com.optima.plugin.host.IViewAidlInterface;
+import com.optima.plugin.plugin1.R;
 import com.optima.plugin.plugin1.activity.ServiceTestActivity;
+import com.optima.plugin.plugin1.binder.ViewBinder;
 import com.optima.plugin.repluginlib.Logger;
+import com.optima.plugin.repluginlib.pluginUtils.P_Binder;
 import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.pluginUtils.P_Manager;
 import com.optima.plugin.repluginlib.utils.NotificationUtils;
@@ -28,9 +32,13 @@ public class Plugin1ServiceTest extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Logger.d(TAG, "onCreate: ");
-        Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid());
-        Logger.d(TAG, "onCreate: pid = " + android.os.Process.myPid() + " ProcessName = " + P_Manager.getProcessName(android.os.Process.myPid() ));
+//        IBinder host_view_binder = P_Binder.getHostBinder("host_view_binder");
+//        IViewAidlInterface iView = IViewAidlInterface.Stub.asInterface(host_view_binder);
+//        try {
+//            iView.setText(R.id.tv_provide_test,"行行行");
+//        } catch (RemoteException e) {
+//            e.printStackTrace();
+//        }
     }
 
 

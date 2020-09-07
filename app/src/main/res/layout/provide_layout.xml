@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button
+        android:id="@+id/btn_provide_onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button测试Click时间"/>
+
+    <Button
+        android:id="@+id/btn_provide_setText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button测试setText时间"/>
+
+    <Button
+        android:id="@+id/btn_provide_setColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button测试setColor时间"/>
+
+    <TextView
+        android:id="@+id/tv_provide_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="TextView测试background"
+        android:background="@drawable/provide_bg"/>
+
+
+        <com.optima.plugin.host.view.TestTextView
+            android:id="@+id/custom_view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:padding="20dp"
+            android:background="@drawable/provide_bg"
+            />
+
+</LinearLayout>

@@ -3,9 +3,14 @@ package com.optima.plugin.plugin1.broadcast;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.IBinder;
+import android.os.RemoteException;
 
+import com.optima.plugin.host.IViewAidlInterface;
+import com.optima.plugin.plugin1.R;
 import com.optima.plugin.plugin1.activity.BroadcastActivity;
 import com.optima.plugin.repluginlib.Logger;
+import com.optima.plugin.repluginlib.pluginUtils.P_Binder;
 import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 
 /**

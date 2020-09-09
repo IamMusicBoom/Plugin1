@@ -23,6 +23,21 @@ android {
             }
         }
     }
+
+    signingConfigs {
+        release {
+            storeFile file('../../repluginlib/ZFY.keystore')
+            keyAlias = 'zft_01'
+            storePassword 'optima61501735'
+            keyPassword 'optima61501735'
+        }
+        debug {
+            storeFile file('../../repluginlib/ZFY.keystore')
+            keyAlias = 'zft_01'
+            storePassword 'optima61501735'
+            keyPassword 'optima61501735'
+        }
+    }
 }
 // 这个plugin需要放在android配置之后，因为需要读取android中的配置项
 apply plugin: 'replugin-plugin-gradle'
@@ -44,4 +59,6 @@ dependencies {
     implementation project(path: ':repluginlib')
 
 
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 }

@@ -13,5 +13,6 @@ interface IViewAidlInterface {
 void onClick(int resId);
 void onLongClick(int resId);
 void setText(int resId,String text);
+void setImgId(int resId,int imgId);
 void startAnim(int resId);
 }

@@ -25,8 +25,9 @@ public class ViewBinder extends IViewAidlInterface.Stub {
             iView = IViewAidlInterface.Stub.asInterface(host_view_binder);
         }else if(resId == R.id.btn_click){
             Logger.d(TAG, "onClick: 点击");
+            iView.setImgId(R.id.img_provider,R.mipmap.xiao_jie_jie);
         }else if(resId == R.id.btn_start_anim){
-            iView.startAnim(R.id.custom_view);
+            iView.startAnim(R.id.wave_view);
         }else if(resId == R.id.tv_set_text){
             iView.setText(R.id.tv_set_text,"这是我设置的值");
         }
@@ -42,6 +43,11 @@ public class ViewBinder extends IViewAidlInterface.Stub {
 
     @Override
     public void setText(int resId, String text) throws RemoteException {
+
+    }
+
+    @Override
+    public void setImgId(int resId,int imgId) throws RemoteException {
 
     }
 

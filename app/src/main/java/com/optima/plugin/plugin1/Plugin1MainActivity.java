@@ -1,11 +1,15 @@
 package com.optima.plugin.plugin1;
 
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Process;
 import android.os.RemoteException;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +21,7 @@ import com.optima.plugin.plugin1.activity.FloatWindowActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
 import com.optima.plugin.plugin1.activity.ServiceTestActivity;
 import com.optima.plugin.repluginlib.Logger;
+import com.optima.plugin.repluginlib.TestActivity;
 import com.optima.plugin.repluginlib.base.BaseActivity;
 import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.pluginUtils.P_Context;
@@ -67,7 +72,11 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
             Intent intent = new Intent(this, CommonAIDLActivity.class);
             startActivity(intent);
         }else if(id == R.id.btn_go_float_window){
-            Intent intent = new Intent(this, FloatWindowActivity.class);
+            Uri imageUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;//content://media/external/images/media
+            ContentResolver contentResolver = P_Context.getContext().getContentResolver();
+            Cursor cursor = contentResolver.query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null, null, null, null);
+            Logger.d(TAG, "onClick: cursor = " + cursor);
+            Intent intent = new Intent(this, TestActivity.class);
             startActivity(intent);
         }
     }

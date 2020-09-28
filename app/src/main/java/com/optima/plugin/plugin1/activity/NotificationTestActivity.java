@@ -41,6 +41,7 @@ public class NotificationTestActivity extends BaseActivity implements View.OnCli
             Intent intent = new Intent(P_Context.getContext(), Plugin1MainActivity.class);
             PendingIntent sure = PendingIntent.getActivity(P_Context.getContext(), 0, intent, 0);
             Notification.Builder builder = utils.createDefaultBuilder();
+            builder.setSmallIcon(R.mipmap.icon_small);
             builder.setContentText("通知").setContentTitle("默认通知").setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.icon_large)).setContentIntent(sure);
             utils.showNotification(666, builder.build());
 

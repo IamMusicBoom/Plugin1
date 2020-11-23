@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.optima.plugin.plugin1">
+
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:name=".Plugin1Application"
         android:allowBackup="true"
@@ -10,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.FloatWindowActivity"></activity>
+        <activity android:name=".activity.DBTestActivity"></activity>
+        <activity android:name=".activity.FloatWindowActivity" />
 
         <meta-data
             android:name="com.qihoo360.plugin.name"
@@ -44,7 +47,7 @@
                 <action android:name="ACTION_FOREGROUND_SERVICE" />
             </intent-filter>
         </service>
-        <service android:name=".service.FloatingService"/>
+        <service android:name=".service.FloatingService" />
 
         <activity android:name=".activity.ServiceTestActivity" />
         <activity android:name=".activity.ProviderTestActivity" />

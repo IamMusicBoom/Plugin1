@@ -12,6 +12,8 @@ import com.optima.plugin.repluginlib.pluginUtils.P_Constants;
 import com.optima.plugin.repluginlib.pluginUtils.P_Context;
 import com.qihoo360.replugin.RePlugin;
 
+import org.xutils.x;
+
 /**
  * create by wma
  * on 2020/8/21 0021
@@ -25,5 +27,6 @@ public class Plugin1Application extends Application {
         P_Context.setContext(this);
         Logger.d(TAG, "onCreate: -------------------------------------------");
         P_Binder.registerPluginBinder("view_holder", new ViewBinder());
+        x.Ext.init(this);
     }
 }

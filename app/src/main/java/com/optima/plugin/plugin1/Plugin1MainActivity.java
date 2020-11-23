@@ -17,6 +17,7 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 
 import com.optima.plugin.plugin1.activity.CommonAIDLActivity;
+import com.optima.plugin.plugin1.activity.DBTestActivity;
 import com.optima.plugin.plugin1.activity.FloatWindowActivity;
 import com.optima.plugin.plugin1.activity.NotificationTestActivity;
 import com.optima.plugin.plugin1.activity.SecondActivity;
@@ -81,6 +82,9 @@ public class Plugin1MainActivity extends BaseActivity implements View.OnClickLis
             startActivity(intent);
         } else if (id == R.id.btn_go_notification) {
             Intent intent = new Intent(Plugin1MainActivity.this, NotificationTestActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.btn_db_test) {
+            Intent intent = new Intent(Plugin1MainActivity.this, DBTestActivity.class);
             startActivity(intent);
         }
     }

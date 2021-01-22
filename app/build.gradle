@@ -26,16 +26,16 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('../../repluginlib/ZFY.keystore')
-            keyAlias = 'zft_01'
-            storePassword 'optima61501735'
+            keyAlias 'zft_01'
             keyPassword 'optima61501735'
+            storeFile file('F:\\work\\ZFT\\ZFY.keystore')
+            storePassword 'optima61501735'
         }
         debug {
-            storeFile file('../../repluginlib/ZFY.keystore')
-            keyAlias = 'zft_01'
-            storePassword 'optima61501735'
+            keyAlias 'zft_01'
             keyPassword 'optima61501735'
+            storeFile file('F:\\work\\ZFT\\ZFY.keystore')
+            storePassword 'optima61501735'
         }
     }
 }
@@ -55,6 +55,6 @@ repluginPluginConfig {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.3'
+    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.4'
     implementation project(path: ':repluginlib')
 }
